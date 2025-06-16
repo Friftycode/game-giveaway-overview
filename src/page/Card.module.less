@@ -1,0 +1,59 @@
+.cardContainer {
+  max-width: 300px;
+  display: flex;
+  gap: var(--spacing-small);
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 1px 10px 0 var(--color-black-light),
+  0 0 1px 0 var(--color-white);
+  transition: box-shadow 0.3s ease,
+  transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px 0 var(--color-black-light),
+    0 0 4px 2px var(--color-white);
+    transform: translateY(-3px) scale(1);
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+  }
+
+  p {
+    font-size: var(--font-size-small);
+    margin: var(--spacing-mini) 0;
+  }
+}
+
+.cardButton {
+  background-color: var(--color-black-light);
+  color: var(--color-white);
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  padding: var(--spacing-mini) var(--spacing-mini);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+
+  &:hover {
+    background-color: var(--color-black-extra-light);
+    color: var(--color-white);
+  }
+}
+
+.iconExternal {
+  width: 16px;
+  height: 16px;
+  margin-left: var(--spacing-mini);
+  vertical-align: middle;
+  margin-top: -2.5px;
+}
