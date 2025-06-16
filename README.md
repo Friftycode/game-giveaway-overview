@@ -18,6 +18,7 @@ A lightweight React app that displays currently available free games and loot fr
 ## ⚙️ Technologies
 
 - **Frontend**:
+
   - React.js
   - TypeScript
   - Vite
@@ -92,19 +93,22 @@ Go to [http://localhost:5173](http://localhost:5173)
 
 ## 🛠️ Development Process
 
-1. **Project Setup**  
+1. **Project Setup**
+
    - Created using `npm create vite@latest` with React + TypeScript.
    - Environment variables configured for API authentication.
 
-2. **Basic Layout & Functionality**  
+2. **Basic Layout & Functionality**
+
    - Built `FreeGamesPage` to fetch and display data.
    - Created `Card` component for each game.
 
-3. **Styling & UX**  
+3. **Styling & UX**
+
    - Styled with Less Modules for scoped and maintainable styles.
    - Loading state and error handling implemented.
 
-4. **Finishing Touches**  
+4. **Finishing Touches**
    - Cleaned up code, added alt text for accessibility.
    - Wrote documentation for future reference.
 

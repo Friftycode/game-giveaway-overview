@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { fetchGiveaways, type GameGiveaway } from './api';
+import Card from './Card';
 import styles from './FreeGamesPage.module.less';
-import Card, { type GameGiveaway } from './Card';
-import { fetchGiveaways } from './api';
 
 const FreeGamesPage: React.FC = () => {
   const [giveaways, setGiveaways] = useState<GameGiveaway[]>([]);

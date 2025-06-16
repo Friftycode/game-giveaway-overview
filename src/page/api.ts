@@ -1,14 +1,11 @@
-import type { GameGiveaway } from "./Card";
-
 export const fetchGiveaways = async (): Promise<GameGiveaway[]> => {
-  const url =
-    "https://gamerpower.p.rapidapi.com/api/filter?platform=epic-games-store.steam.android&type=game.loot";
+  const url = 'https://gamerpower.p.rapidapi.com/api/giveaways';
 
   const options = {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "X-RapidAPI-Key": import.meta.env.VITE_RAPIDAPI_KEY,
-      "X-RapidAPI-Host": "gamerpower.p.rapidapi.com",
+      'X-RapidAPI-Key': import.meta.env.VITE_RAPIDAPI_KEY,
+      'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com',
     },
   };
 
@@ -18,4 +15,14 @@ export const fetchGiveaways = async (): Promise<GameGiveaway[]> => {
   }
 
   return response.json();
+};
+
+export type GameGiveaway = {
+  id: number;
+  title: string;
+  platforms: string;
+  status: string;
+  worth: string;
+  open_giveaway_url: string;
+  image: string;
 };
