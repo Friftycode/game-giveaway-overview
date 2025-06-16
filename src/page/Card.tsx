@@ -1,14 +1,8 @@
 import React from 'react';
-import styles from './Card.module.less';
 import iconExternal from '../assets/icon-external.svg';
+import { type GameGiveaway } from './api';
 
-export type GameGiveaway = {
-  id: number;
-  title: string;
-  platforms: string;
-  open_giveaway_url: string;
-  image: string;
-};
+import styles from './Card.module.less';
 
 type CardProps = {
   giveaway: GameGiveaway;
@@ -16,14 +10,34 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ giveaway }) => (
   <li className={styles.cardContainer}>
-    <div className={styles.cardContent}>
-      <img src={giveaway.image} alt={giveaway.title} width={300} />
-      <h2>{giveaway.title}</h2>
-      <p>{giveaway.platforms}</p>
-    </div>
-    <a className={styles.cardButton} href={giveaway.open_giveaway_url}>
-      CLAIM NOW
-      <img src={iconExternal} alt="External" className={styles.iconExternal} />
+    <a className={styles.cardLinkContainer} href={giveaway.open_giveaway_url}>
+      <div className={styles.cardContent}>
+        <img
+          className={styles.productImage}
+          src={giveaway.image}
+          alt={giveaway.title}
+        />
+        <h2>{giveaway.title}</h2>
+        <p className={styles.productPlatforms}>
+          {giveaway.platforms.split(', ').map((platform) => (
+            <span key={platform.trim()} className={styles.productPlatform}>
+              {platform.replace(' ', ' ').trim()}
+            </span>
+          ))}
+        </p>
+      </div>
+      <p className={styles.productWorth}>
+        <span className={styles.productFreePill}>FREE</span>
+        <s>{giveaway.worth === 'N/A' ? '' : giveaway.worth}</s>
+      </p>
+      <div className={styles.cardButton}>
+        CLAIM NOW
+        <img
+          src={iconExternal}
+          alt="External"
+          className={styles.cardIconExternal}
+        />
+      </div>
     </a>
   </li>
 );

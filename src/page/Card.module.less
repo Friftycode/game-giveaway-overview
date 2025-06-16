@@ -1,9 +1,5 @@
 .cardContainer {
   max-width: 300px;
-  display: flex;
-  gap: var(--spacing-small);
-  flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
   box-shadow: 0 1px 10px 0 var(--color-black-light),
   0 0 1px 0 var(--color-white);
@@ -11,15 +7,30 @@
   transform 0.3s ease;
 
   &:hover {
-    box-shadow: 0 4px 16px 0 var(--color-black-light),
-    0 0 4px 2px var(--color-white);
+    box-shadow: 0 4px 8px 0 var(--color-black-light),
+    0 0 4px 1px var(--color-white);
     transform: translateY(-3px) scale(1);
   }
+}
+
+.cardLinkContainer {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 1px 10px 0 var(--color-black-light),
+  0 0 1px 0 var(--color-white);
+  transition: box-shadow 0.3s ease,
+  transform 0.3s ease;
+  text-decoration: none;
+  height: 100%;
 }
 
 .cardContent {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 
   h2 {
     font-size: var(--font-size-small);
@@ -34,26 +45,49 @@
 }
 
 .cardButton {
+  padding: var(--spacing-xmini);
   background-color: var(--color-black-light);
-  color: var(--color-white);
-  font-size: var(--font-size-xsmall);
-  font-weight: var(--font-weight-medium);
-  text-decoration: none;
-  padding: var(--spacing-mini) var(--spacing-mini);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-
-  &:hover {
-    background-color: var(--color-black-extra-light);
-    color: var(--color-white);
-  }
+  text-align: center;
 }
 
-.iconExternal {
+.cardIconExternal {
   width: 16px;
   height: 16px;
   margin-left: var(--spacing-mini);
   vertical-align: middle;
   margin-top: -2.5px;
+}
+
+.productImage {
+  width: 300px;
+  height: 120px;
+}
+
+.productPlatforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xmini);
+  margin-top: var(--spacing-small);
+  justify-content: center;
+  width: 100%;
+}
+
+.productPlatform {
+  background: var(--color-black-extra-light);
+  border-radius: var(--border);
+  margin: var(--spacing-xmini) var(--spacing-xmini);
+  padding: var(--spacing-xmini) var(--spacing-mini);
+  font-size: var(--font-size-xsmall);
+}
+
+.productWorth {
+  margin: var(--spacing-xmini) 0;
+  font-size: var(--font-size-xsmall);
+}
+
+.productFreePill {
+  border-radius: var(--border);
+  border: 1px solid var(--color-white);
+  margin-right: var(--spacing-mini);
+  padding: var(--spacing-xmini) var(--spacing-mini);
 }
