@@ -1,54 +1,115 @@
-# React + TypeScript + Vite
+# 🎮 Free Game Giveaways
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React app that displays currently available free games and loot from the [GamerPower API](https://www.gamerpower.com/api-read). It fetches and displays giveaways across platforms like Steam, Epic Games Store, and Android.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📑 Table of Contents
 
-## Expanding the ESLint configuration
+- [Technologies](#technologies)
+- [Components](#components)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Development Process](#development-process)
+- [Links](#links)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## ⚙️ Technologies
+
+- **Frontend**:
+
+  - React.js
+  - TypeScript
+  - Vite
+  - Less Modules
+- **API**:
+
+  - [GamerPower API via RapidAPI](https://rapidapi.com/digiwalls/api/gamerpower)
+
+---
+
+## 🧩 Components
+
+The key components are simple, modular, and reusable:
+
+- **FreeGamesPage**
+  Loads and displays all available giveaways. Handles loading and error states.
+- **Card**
+  Displays an individual giveaway with an image, title, platform info, and a link to claim the game.
+- **fetchGiveaways**
+  Fetches giveaway data from the API using correct headers and error handling.
+
+---
+
+## 🧪 Installation
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository:
+
+```bash
+git clone https://github.com/Friftycode/game-giveaway-overview.git
+cd free-games
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+npm install
 ```
+
+### 3. Configure environment variables:
+
+Create a `.env` file in the root of the project and add your RapidAPI key:
+
+```env
+VITE_RAPIDAPI_KEY=your_rapidapi_key
+```
+
+### 4. Start the development server:
+
+```bash
+npm run dev
+```
+
+### 5. Open in your browser:
+
+Go to [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🕹️ Usage
+
+- **Viewing Giveaways**
+  The app automatically fetches and displays all available free game giveaways.
+- **Claiming Games**
+  Click the **"CLAIM NOW"** button to open the giveaway page in a new tab.
+
+---
+
+## 🛠️ Development Process
+
+1. **Project Setup**
+
+   - Created using `npm create vite@latest` with React + TypeScript.
+   - Environment variables configured for API authentication.
+2. **Basic Layout & Functionality**
+
+   - Built `FreeGamesPage` to fetch and display data.
+   - Created `Card` component for each game.
+3. **Styling & UX**
+
+   - Styled with Less Modules for scoped and maintainable styles.
+   - Loading state and error handling implemented.
+4. **Finishing Touches**
+
+   - Cleaned up code, added alt text for accessibility.
+   - Wrote documentation for future reference.
+
+---
+
+## 📎 Links
+
+- 📘 [GamerPower API Docs](https://www.gamerpower.com/api-read)
+- 🚀 [GamerPower on RapidAPI](https://rapidapi.com/digiwalls/api/gamerpower)
