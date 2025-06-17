@@ -1,10 +1,10 @@
-# 🎮 Free Game Giveaways
+# Free Game Giveaways
 
 A lightweight React app that displays currently available free games and loot from the [GamerPower API](https://www.gamerpower.com/api-read). It fetches and displays giveaways across platforms like Steam, Epic Games Store, and Android.
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Technologies](#technologies)
 - [Components](#components)
@@ -15,7 +15,7 @@ A lightweight React app that displays currently available free games and loot fr
 
 ---
 
-## ⚙️ Technologies
+## Technologies
 
 - **Frontend**:
 
@@ -30,7 +30,7 @@ A lightweight React app that displays currently available free games and loot fr
 
 ---
 
-## 🧩 Components
+## Components
 
 The key components are simple, modular, and reusable:
 
@@ -43,7 +43,7 @@ The key components are simple, modular, and reusable:
 
 ---
 
-## 🧪 Installation
+## Installation
 
 Follow these steps to run the project locally:
 
@@ -80,7 +80,7 @@ Go to [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🕹️ Usage
+## Usage
 
 - **Viewing Giveaways**
   The app automatically fetches and displays all available free game giveaways.
@@ -89,7 +89,7 @@ Go to [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🛠️ Development Process
+## Development Process
 
 1. **Project Setup**
 
@@ -113,7 +113,7 @@ Go to [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 📎 Links
+## Links
 
-- 📘 [GamerPower API Docs](https://www.gamerpower.com/api-read)
-- 🚀 [GamerPower on RapidAPI](https://rapidapi.com/digiwalls/api/gamerpower)
+- [GamerPower API Docs](https://www.gamerpower.com/api-read)
+- [GamerPower on RapidAPI](https://rapidapi.com/digiwalls/api/gamerpower)
