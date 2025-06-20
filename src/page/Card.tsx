@@ -10,7 +10,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ giveaway }) => (
   <li className={styles.cardContainer}>
-    <a className={styles.cardLinkContainer} href={giveaway.open_giveaway_url}>
+    <a className={styles.cardLinkContainer} href={giveaway.openGiveAwayUrl}>
       <div className={styles.cardContent}>
         <img
           className={styles.productImage}
@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ giveaway }) => (
         />
         <h2>{giveaway.title}</h2>
         <p className={styles.productPlatforms}>
-          {giveaway.platforms.split(', ').map((platform) => (
+          {giveaway.platforms.map((platform) => (
             <span key={platform.trim()} className={styles.productPlatform}>
               {platform.replace(' ', ' ').trim()}
             </span>
