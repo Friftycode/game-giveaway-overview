@@ -1,6 +1,6 @@
-.pageContainer {
-  margin: 0 auto;
+@import "../index.less";
 
+.mainContainer {
   h1 {
     font-size: var(--font-size-xlarge);
     font-weight: var(--font-weight-bold);
@@ -14,12 +14,15 @@
 
 .cardList {
   gap: var(--spacing-medium);
-  width: 100%;
   list-style-type: none;
   padding: 0;
-
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  margin-right: 224px;
+
+  @media @breakpoint-tablet {
+    margin-right: 0;
+  }
 }
