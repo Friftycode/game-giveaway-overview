@@ -8,7 +8,7 @@ interface PlatformFilterProps {
   onSelectAll: () => void;
 }
 
-const PlatformFilter: FC<PlatformFilterProps> = ({
+const Filter: FC<PlatformFilterProps> = ({
   platforms,
   selectedPlatforms,
   onToggle,
@@ -47,4 +47,4 @@ const PlatformFilter: FC<PlatformFilterProps> = ({
   </aside>
 );
 
-export default PlatformFilter;
+export default Filter;
