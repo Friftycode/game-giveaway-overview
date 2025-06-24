@@ -2,7 +2,7 @@
 
 A lightweight React app that displays currently available free games and loot from the [GamerPower API](https://www.gamerpower.com/api-read). It fetches and displays giveaways across platforms like Steam, Epic Games Store, and Android.
 
-![img.png](src/assets/img.png)
+![readme.png](src/assets/readme.png)
 
 ---
 
