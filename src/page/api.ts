@@ -15,15 +15,17 @@ export const fetchGiveaways = async (): Promise<GameGiveaway[]> => {
   }
 
   return response.json().then((r) =>
-    r.map((giveaway: GiveawayResponse): GameGiveaway => ({
-      id: giveaway.id,
-      title: giveaway.title,
-      status: giveaway.status,
-      worth: giveaway.worth,
-      image: giveaway.image,
-      openGiveAwayUrl: giveaway.open_giveaway_url,
-      platforms: giveaway.platforms.split(', '),
-    }))
+    r.map(
+      (giveaway: GiveawayResponse): GameGiveaway => ({
+        id: giveaway.id,
+        title: giveaway.title,
+        status: giveaway.status,
+        worth: giveaway.worth,
+        image: giveaway.image,
+        openGiveAwayUrl: giveaway.open_giveaway_url,
+        platforms: giveaway.platforms.split(', '),
+      })
+    )
   );
 };
 
@@ -36,7 +38,6 @@ export type GiveawayResponse = {
   open_giveaway_url: string;
   image: string;
 };
-
 
 export type GameGiveaway = {
   id: number;
